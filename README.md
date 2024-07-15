@@ -1,10 +1,7 @@
-# Angular
+<div align="center"> 
+  <img width="49%" height="195px" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angular/angular-original.svg" /> <br>
+</div> <br>
 
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.14.
-
-
-## Development Server
 
 ## Run for a Development Server
 
@@ -68,7 +65,7 @@ ng help
 
 * Angular Material
 
-* Angular
+* Angular 16.2.14.
 
 * TypeScript
 
