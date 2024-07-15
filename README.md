@@ -58,7 +58,7 @@ Run to get more help on the Angular CLI or go check out the [Angular CLI Overvie
 ng help
 ```
 
- <br>
+<br>
 
 
 ## 🚀 Ferramentas Utilizadas:
@@ -75,7 +75,7 @@ ng help
 
 * CSS
 
- <br>
+<br>
 
 ## 🖥️ Desenvolvido por:
 
