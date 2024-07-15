@@ -60,3 +60,20 @@ Run to get more help on the Angular CLI or go check out the [Angular CLI Overvie
 ```bash
 ng help
 ```
+
+
+## 🚀 Ferramentas Utilizadas:
+
+* Visual Studio Code
+
+* Angular Material
+
+* Angular
+
+* TypeScript
+
+* HTML
+
+* CSS
+
+
