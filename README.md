@@ -3,24 +3,26 @@
 </div> <br>
 
 
-## Run for a Development Server
+## Running the App
 
 ```bash
+# Development Server
 ng serve
 ```
 
-## The Application will automatically reload if you change any of the source files.
+## Reload the Application 
 
 ```bash
+# It will automatically reload if you change any of the source files.
 http://localhost:4200/
 ```
 
 
 ## Code Scaffolding
 
-Run to generate a new component. 
 
 ```bash
+# Run to generate a new component. 
 ng generate component component-name
 ```
 
