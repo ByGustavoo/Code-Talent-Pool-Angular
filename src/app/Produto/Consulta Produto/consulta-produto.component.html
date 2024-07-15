@@ -1,1 +1,50 @@
-<p>consulta-produto works!</p>
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="consulta-produto.component.css" />
+  </head>
+
+  <header class="toolbar">
+    <div class="toolbar">
+      <img
+        width="35"
+        alt="Plus Logo"
+        src="assets/icone-mais.png"
+        matTooltip="Ao clicar no botão, você será redirecionado para a Página de Cadastro de Produtos."
+        matTooltipClass="example-tooltip-uppercase"
+        aria-label="Button that shows a red tooltip"
+        class="example-button"
+      />
+      <span>Consulta de Produto</span>
+    </div>
+  </header>
+
+  <body>
+    <body>
+      <div class="inputs">
+        <mat-form-field appearance="outline" floatLabel="always">
+          <mat-label class="titulo">Código do Produto</mat-label>
+          <input matInput placeholder="Produto" />
+        </mat-form-field>
+    
+        <mat-form-field appearance="outline" floatLabel="always" class="descricao">
+          <mat-label class="titulo">Descrição</mat-label>
+          <input matInput placeholder="Descrição do Produto" />
+        </mat-form-field>
+    
+        <mat-form-field appearance="outline" floatLabel="always">
+          <mat-label class="titulo">Custo</mat-label>
+          <input matInput placeholder="Custo do Produto" />
+        </mat-form-field>
+    
+        <mat-form-field appearance="outline" floatLabel="always">
+          <mat-label class="titulo">Preço Venda</mat-label>
+          <input matInput placeholder="Preço do Produto" />
+        </mat-form-field>
+      </div>
+    </body>
+    
+  </body>
+</html>
