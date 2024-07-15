@@ -34,7 +34,7 @@ ng build
 ```
 
 
-## Running unit tests
+## Running Unit Tests
 
 Run to execute the unit tests via [Karma](https://karma-runner.github.io).
 
@@ -42,7 +42,7 @@ Run to execute the unit tests via [Karma](https://karma-runner.github.io).
 ng test
 ```
 
-## Running end-to-end tests
+## Running end-to-end Tests
 
 Run to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
@@ -50,7 +50,7 @@ Run to execute the end-to-end tests via a platform of your choice. To use this c
 ng e2e
 ```
 
-## Further help
+## Further Help
 
 Run to get more help on the Angular CLI or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
