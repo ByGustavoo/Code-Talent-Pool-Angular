@@ -16,7 +16,7 @@
           width="35"
           alt="Icone mais imagem"
           src="assets/icone-adicionar-branco.png"
-          matTooltip="Ao clicar no botão, você será redirecionado para a Página de Cadastro de Produtos."
+          matTooltip="Ao clicar no botão, você será redirecionado para a Página de Cadastro de Produto."
           matTooltipClass="example-tooltip-uppercase"
           aria-label="Button that shows a red tooltip"
           class="example-button"/>
@@ -70,7 +70,7 @@
 
           <ng-container matColumnDef="custo">
             <th mat-header-cell *matHeaderCellDef>Custo</th>
-            <td class="coluna-custo" mat-cell *matCellDef="let element">{{ element.custo }}</td>
+            <td class="coluna-custo" mat-cell *matCellDef="let element">{{ "R$  " + element.custo }}</td>
           </ng-container>
 
             <ng-container matColumnDef="botoes">
@@ -84,12 +84,13 @@
                     mat-fab
                     color="primary"
                     aria-label="Example icon button with a delete icon"
-                    matTooltip="Ao clicar nesse botão, você será redirecionado para a página de Edição de Produtos."
+                    matTooltip="Ao clicar nesse botão, você será redirecionado para a página de Edição de Produto."
                     matTooltipPosition="left">
                     <mat-icon>edit</mat-icon>
                   </button>
 
                     <button
+                    (click)="confimaExcluir()"
                     class="botao-excluir"
                     mat-fab
                     color="warn"

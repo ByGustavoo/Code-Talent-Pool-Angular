@@ -1,14 +1,15 @@
 import { AfterViewInit, Component, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-consulta-produto',
   templateUrl: './consulta-produto.component.html',
   styleUrls: ['./consulta-produto.component.css'],
 })
-export class ConsultaProdutoComponent implements AfterViewInit {
 
+export class ConsultaProdutoComponent implements AfterViewInit {
   displayedColumns: string[] = ['codigo', 'descricao', 'custo', 'botoes'];
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
 
@@ -18,6 +19,27 @@ export class ConsultaProdutoComponent implements AfterViewInit {
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
   }
+
+  confimaExcluir() {
+    Swal.fire({
+      title: "ATENÇÃO",
+      text: "O produto selecionado será permanentemente deletado do sistema. Deseja prosseguir?",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3f51b5",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "DELETAR",
+      cancelButtonText: "CANCELAR"
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire({
+          title: "Sucesso",
+          text: "O produto foi removido da sua lista.",
+          icon: "success",
+        });
+      }
+    });    
+  } 
 }
 
 export interface PeriodicElement {
