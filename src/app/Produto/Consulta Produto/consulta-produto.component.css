@@ -69,10 +69,17 @@ animation-delay: 0.5s;
 
 .tabela-codigo {
   width: 16.5%;
+  text-align: center; 
+  vertical-align: middle;
 }
 
 .tabela-descricao {
   width: 50%;
+}
+
+.tabela-custo {
+  text-align: center; 
+  vertical-align: middle;
 }
 
 .botoes {

@@ -13,19 +13,19 @@
     <header class="toolbar">
       <div class="toolbar">
         <img
-          width="35"
+          width="38"
           alt="Icone mais imagem"
           src="assets/icone-adicionar-branco.png"
-          matTooltip="Ao clicar no botão, você será redirecionado para a Página de Cadastro de Produto."
+          matTooltip="Ao clicar no botão, você será redirecionado para a página de Cadastro de Produto"
           matTooltipClass="example-tooltip-uppercase"
           aria-label="Button that shows a red tooltip"
-          class="example-button"/>
+          class="example-button"
+          [routerLink]="['/produto/cadastro']"/>
+        </div>
 
         <div class="cssanimation leFadeInLeft sequence">
           <span>Consulta de Produto</span>
         </div>
-
-      </div>
     </header>
 
 
@@ -60,7 +60,7 @@
 
           <ng-container matColumnDef="codigo">
             <th class="tabela-codigo" mat-header-cell *matHeaderCellDef>Código</th>
-            <td mat-cell *matCellDef="let element">{{ element.codigo }}</td>
+            <td class="tabela-codigo" mat-cell *matCellDef="let element">{{ element.codigo }}</td>
           </ng-container>
 
           <ng-container matColumnDef="descricao">
@@ -69,8 +69,8 @@
           </ng-container>
 
           <ng-container matColumnDef="custo">
-            <th mat-header-cell *matHeaderCellDef>Custo</th>
-            <td class="coluna-custo" mat-cell *matCellDef="let element">{{ "R$  " + element.custo }}</td>
+            <th class="tabela-custo" mat-header-cell *matHeaderCellDef>Custo</th>
+            <td class="tabela-custo" mat-cell *matCellDef="let element">{{ "R$  " + element.custo }}</td>
           </ng-container>
 
             <ng-container matColumnDef="botoes">

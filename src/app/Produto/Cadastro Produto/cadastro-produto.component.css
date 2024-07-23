@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+body {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+}
+
+.toolbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  background-color: #1976d2;
+  color: white;
+  font-weight: 800;
+  font-size: 22px;
+}
+
+.toolbar img {
+  margin-left: 22px;
+  cursor: pointer;
+}
+
+.cssanimation {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.leFadeInLeft span { 
+animation-name: leFadeInLeft;
+animation-delay: 0.5s; 
+}
+
+@keyframes leFadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-250px);
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.inputs {
+  margin-top: 8.7%;
+  margin-left: 3.9%;
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+
+.titulo {
+  color: black;
+}
+
+.descricao {
+  width: 36.7%;
+}
+
+.mat-elevation-z8 {
+  margin-top: 2.5%;
+  margin-left: 4%;
+  width: 66%;
+}
+
+.btnAdicionar {
+  cursor: pointer;
+  padding-top: 4px;
+}
+
+.tabela-codigo {
+  text-align: center; 
+  vertical-align: middle;
+  padding: 8px; 
+}
+
+.tabela-preco {
+  padding-left: 12%;
+  text-align: center; 
+  vertical-align: middle;
+}
+
+.botoes {
+  display: flex;
+  justify-content: center;
+  padding: 7%;
+}
+
+.botao-editar {
+  width: 41px;
+  height: 40px;
+  margin-left: 40%;
+}
+
+.botao-excluir {
+  width: 41px;
+  height: 40px;
+  margin-left: 10%;
+}
+

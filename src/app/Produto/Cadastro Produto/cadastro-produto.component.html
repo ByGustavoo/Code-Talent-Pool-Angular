@@ -1,1 +1,142 @@
-<p>cadastro-produto works!</p>
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="cadastro-produto.component.css" />
+    <link href="https://cdn.jsdelivr.net/gh/yesiamrocks/cssanimation.io@1.0.3/cssanimation.min.css" rel="stylesheet" />
+  </head>
+  <body>
+
+
+    <!-- Navbar -->
+    <header class="toolbar">
+      <div class="toolbar">
+        <img
+          width="25"
+          alt="Icone mais imagem"
+          src="assets/seta-esquerda-voltar-branca.svg"
+          matTooltip="Clique para retornar à página de Consulta de Produto"
+          matTooltipClass="example-tooltip-uppercase"
+          aria-label="Button that shows a red tooltip"
+          class="example-button"
+          [routerLink]="['/produto']"/>
+
+          <img
+          width="25"
+          alt="Icone mais imagem"
+          src="assets/icone-salvar-branco.svg"
+          matTooltip="Clique para salvar as alterações"
+          matTooltipClass="example-tooltip-uppercase"
+          aria-label="Button that shows a red tooltip"
+          class="example-button" />
+
+          <img
+          width="22"
+          alt="Icone mais imagem"
+          src="assets/icone-lixo-branco.svg"
+          matTooltip="Clique para deletar o produto"
+          matTooltipClass="example-tooltip-uppercase"
+          aria-label="Button that shows a red tooltip"
+          class="example-button" />
+        </div>
+
+        <div class="cssanimation leFadeInLeft sequence">
+          <span>Cadastro de Produto</span>
+        </div>
+    </header>
+
+
+    <!-- Inputs -->
+    <main>
+      <div class="inputs">
+        <mat-form-field appearance="outline" floatLabel="always">
+          <mat-label class="titulo">Código do Produto</mat-label>
+          <input matInput placeholder="Produto" type="number" />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" floatLabel="always" class="descricao">
+          <mat-label class="titulo">Descrição</mat-label>
+          <input matInput placeholder="Descrição do Produto" type="text" />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" floatLabel="always">
+          <mat-label class="titulo">Custo</mat-label>
+          <input matInput placeholder="Custo do Produto" type="number" />
+        </mat-form-field>
+      </div>
+
+
+      <!-- Tabela -->
+      <div class="mat-elevation-z8">
+        <table mat-table [dataSource]="dataSource">
+
+            <ng-container matColumnDef="btnAdicionar">
+                <th class="btnAdicionar" mat-header-cell *matHeaderCellDef>
+                        <img   
+                        width="32" 
+                        alt="Icone mais imagem" 
+                        src="assets/icone-adicionar.png"
+                        matTooltip="Ao clicar no botão, você será redirecionado para a página de Cadastro de Produto"
+                        matTooltipClass="example-tooltip-uppercase" 
+                        aria-label="Button that shows a red tooltip"
+                        class="example-button" />
+                </th>
+                <td class="btnAdicionar" mat-cell *matCellDef="let element">{{ element.btnAdicionar }}</td>
+            </ng-container>
+
+        <ng-container matColumnDef="codigo">
+            <th class="tabela-codigo" mat-header-cell *matHeaderCellDef>Loja</th>
+            <td class="tabela-codigo" mat-cell *matCellDef="let element">{{ element.codigo }}</td>
+        </ng-container>
+
+          <ng-container matColumnDef="preco">
+            <th class="tabela-preco" mat-header-cell *matHeaderCellDef>Preço de Venda</th>
+            <td class="tabela-preco" mat-cell *matCellDef="let element">{{ "R$  " + element.preco }}</td>
+          </ng-container>
+
+            <ng-container matColumnDef="botoes">
+              <th mat-header-cell *matHeaderCellDef></th>
+              <td mat-cell *matCellDef="let element">{{ element.botoes }}
+
+                  <div class="botoes">
+                    <button
+                    class="botao-editar"
+                    mat-fab
+                    color="primary"
+                    aria-label="Example icon button with a delete icon"
+                    matTooltip="Ao clicar nesse botão, você será redirecionado para a página de Edição de Produto."
+                    matTooltipPosition="left">
+                    <mat-icon>edit</mat-icon>
+                  </button>
+
+                    <button
+                    (click)="confimaExcluir()"
+                    class="botao-excluir"
+                    mat-fab
+                    color="warn"
+                    aria-label="Example icon button with a delete icon"
+                    matTooltip="Ao clicar nesse botão, o produto selecionado será excluído!"
+                    matTooltipPosition="left">
+                    <mat-icon>delete</mat-icon>
+                  </button>
+                </div>
+
+            </td>
+          </ng-container>
+
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+        </table>
+
+        <mat-paginator
+          [pageSizeOptions]="[3, 8, 15]"
+          showFirstLastButtons
+          aria-label="Select page of periodic elements">
+        </mat-paginator>
+      </div>
+
+      
+    </main>
+  </body>
+</html>
