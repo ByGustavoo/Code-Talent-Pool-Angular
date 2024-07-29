@@ -69,7 +69,8 @@ animation-delay: 0.5s;
 
 .btnAdicionar {
   cursor: pointer;
-  padding-top: 4px;
+  padding-top: 2.5px;
+  width: 6%;
 }
 
 .tabela-codigo {
@@ -101,4 +102,9 @@ animation-delay: 0.5s;
   height: 40px;
   margin-left: 10%;
 }
+
+.example-card {
+  max-width: 50px;
+}
+
 

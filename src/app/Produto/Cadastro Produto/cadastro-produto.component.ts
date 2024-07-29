@@ -6,7 +6,7 @@ import Swal from 'sweetalert2';
 @Component({
   selector: 'app-cadastro-produto',
   templateUrl: './cadastro-produto.component.html',
-  styleUrls: ['./cadastro-produto.component.css']
+  styleUrls: ['./cadastro-produto.component.css'],
 })
 
 export class CadastroProdutoComponent implements AfterViewInit {
@@ -20,26 +20,43 @@ export class CadastroProdutoComponent implements AfterViewInit {
     this.dataSource.paginator = this.paginator;
   }
 
+
   confimaExcluir() {
     Swal.fire({
-      title: "ATENÇÃO",
-      text: "O preço cadastrado para a loja selecionada será deletado do sistema. Deseja prosseguir?",
-      icon: "warning",
+      title: 'ATENÇÃO',
+      text: 'O preço cadastrado para a loja selecionada será deletado do sistema. Deseja prosseguir?',
+      icon: 'warning',
       showCancelButton: true,
-      confirmButtonColor: "#3f51b5",
-      cancelButtonColor: "#d33",
-      confirmButtonText: "DELETAR",
-      cancelButtonText: "CANCELAR"
+      confirmButtonColor: '#3f51b5',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'DELETAR',
+      cancelButtonText: 'CANCELAR',
     }).then((result) => {
       if (result.isConfirmed) {
         Swal.fire({
-          title: "Sucesso",
-          text: "O preço foi removido da sua loja.",
-          icon: "success",
+          title: 'Sucesso',
+          text: 'O preço foi removido da sua loja.',
+          icon: 'success',
         });
       }
-    });    
-  } 
+    });
+  }
+
+
+  /*async confimaEditar() {
+    const { value: formValues } = await Swal.fire({
+      title: 'Alteração/Inclusão de Preço',
+      html:
+        Loja:,
+      focusConfirm: false,
+      showCancelButton: true,
+      confirmButtonText: 'Confirmar',
+      cancelButtonText: 'Cancelar',
+      confirmButtonColor: '#3f51b5',
+      cancelButtonColor: '#d33',
+    }
+  )}*/
+
 }
 
 export interface PeriodicElement {
